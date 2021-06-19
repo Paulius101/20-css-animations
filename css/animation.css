@@ -3,26 +3,36 @@ body {
 }
 
 .square {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 100px;
   height: 100px;
   background-color: yellow;
-  animation-name: susiapvalinti;
-  animation-duration: 2s;
+  animation-name: kvadratas;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
 }
+.square:hover {
+  animation-play-state: paused;
+}
 
-@keyframes susiapvalinti {
+@keyframes kvadratas {
   0% {
-    border-radius: 0;
-    border: 0px dotted red;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  25% {
+    margin-left: 300px;
+    margin-top: 0px;
+  }
+  50% {
+    margin-top: 300px;
+    margin-left: 300px;
+  }
+  75% {
+    margin-left: 0px;
+    margin-top: 300px;
   }
   100% {
-    border-radius: 50%;
-    border: 10px dotted red;
-    background-color: blue;
+    margin-left: 0px;
+    margin-top: 0px;
   }
 }
